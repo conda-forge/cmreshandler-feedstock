@@ -1,0 +1,25 @@
+From 92fdf63df2b9e88f5bbe8d6b8f958b202aa2439a Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Fri, 28 Aug 2020 10:28:03 +0200
+Subject: [PATCH] Exclude tests from installation
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 08baacc..4087fc6 100644
+--- a/setup.py
++++ b/setup.py
+@@ -76,7 +76,7 @@ setup(
+ 
+     # You can just specify the packages manually here if your project is
+     # simple. Or you can use find_packages().
+-    packages=find_packages(exclude=['dist', 'docs', 'build']),
++    packages=find_packages(exclude=['dist', 'docs', 'build', 'tests', 'tests.*']),
+ 
+     # Alternatively, if you want to distribute just a my_module.py, uncomment
+     # this:
+-- 
+2.27.0
+
